@@ -24,6 +24,18 @@ variable "dns_servers" {
   default     = []
 }
 
+variable "subnet_service_endpoints" {
+  description = "The list of Service endpoints to associate with the subnet"
+  type        = list
+  default     = []
+}
+
+variable "subnet_enforce_private_link_endpoint_network_policies" {
+  description = " Enable or Disable network policies for the private link endpoint on the subnet"
+  type        = bool
+  default     = false
+}
+
 variable "subnet_prefixes" {
   description = "The address prefix to use for the subnet."
   default     = ["10.0.1.0/24"]
